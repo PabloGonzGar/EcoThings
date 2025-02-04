@@ -57,7 +57,7 @@ body {
 
       align-items: center;
       justify-content: space-between;
-      padding-top: 40px;
+      padding-top: 20px;
       padding-left: 100px;
       padding-right: 50px;
       position: fixed;
@@ -151,6 +151,10 @@ body {
 
     }
 
+    nav.scrolled{
+      backdrop-filter: blur(10px);
+      background-color: rgba(180, 180, 180, 0.363);
+    }
 
     .hero {
       display: flex;
@@ -253,6 +257,11 @@ body.dark {
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: fill;
+
+    nav{
+      background-color: transparent;
+      backdrop-filter: none;
+    }
 
     h1 {
       background: $h1-color;

@@ -30,7 +30,7 @@ body header nav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 20px;
   padding-left: 100px;
   padding-right: 50px;
   position: fixed;
@@ -106,6 +106,11 @@ body header nav .modo .switch-checkbox:checked + .switch-label .switch-button::b
 body header nav .modo .switch-checkbox:checked ~ body {
   background-color: #1a1a1a;
 }
+body header nav.scrolled {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background-color: rgba(180, 180, 180, 0.363);
+}
 body header .hero {
   display: flex;
   justify-self: center;
@@ -180,6 +185,11 @@ body.dark header {
   background-size: cover;
   -o-object-fit: fill;
      object-fit: fill;
+}
+body.dark header nav {
+  background-color: transparent;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
 }
 body.dark header h1 {
   background: -webkit-linear-gradient(90deg, rgba(2, 58, 41, 0.068) 30%, rgb(255, 255, 255) 60%);
