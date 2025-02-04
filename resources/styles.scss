@@ -18,7 +18,8 @@ body {
   $background-image : url('images/back-dia.png');
   $h1-color: -webkit-linear-gradient(90deg, rgba(2, 58, 41, 0.068) 35%, rgb(0, 12, 4) 70%);
   $a-color: rgb(0, 12, 4);
-  
+  $bg-color : rgba(0, 12, 4, 1);
+
 
   * {
     box-sizing: inherit;
@@ -31,11 +32,13 @@ body {
   padding: 0;
   transition: 0.3s ease;
   box-sizing: border-box;
+  background-color: $bg-color;
 
 
 
   header {
-    background: $background-image;
+    background: linear-gradient(0deg, rgba(0, 12, 4, 1) 0.5%, rgba(0, 0, 0, 0.06486344537815125) 70%), $background-image;
+    background-color: rgba(0, 12, 4, 1);
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -53,10 +56,13 @@ body {
       @include flexRow();
 
       align-items: center;
+      justify-content: space-between;
       padding-top: 40px;
       padding-left: 100px;
       padding-right: 50px;
-      justify-content: space-between;
+      position: fixed;
+      width: 100%;
+      z-index: 2;
 
       .links {
 
@@ -65,7 +71,7 @@ body {
 
         a {
           text-decoration: none;
-          font-size: 25px;
+          font-size: 20px;
           color: $a-color;
           font-weight: 600;
           transition: 0.25s;
@@ -99,7 +105,7 @@ body {
           display: block;
           width: 60px;
           height: 30px;
-          background-color: #83d8ff;
+          background-color: #3c4145;
           border-radius: 15px;
           cursor: pointer;
           transition: background-color 0.3s ease;
@@ -112,7 +118,7 @@ body {
           width: 26px;
           height: 26px;
           border-radius: 50%;
-          background-color: #ffdb57;
+          background-color: #7e7e7e;
           transition: 0.3s ease;
         }
 
@@ -150,6 +156,7 @@ body {
       display: flex;
       justify-self: center;
       align-self: center;
+      padding-top: 150px;
 
       h1 {
         font-size: 190px;
@@ -158,7 +165,6 @@ body {
         background: $h1-color;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        padding: 10px;
 
       }
     }
@@ -169,67 +175,62 @@ body {
 
 
   .productos {
-    height: 100vh;
-    background-color: #d7dad7;
+    height: 85vh;
+    background-color: #d3dadf;
     @include flexColumn();
-
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 30px;
+    width: 80%;
+    margin: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 
     h2 {
       font-size: 35px;
       font-weight: 600;
-      height: 10vh;
-      color: rgb(0, 12, 4);
+      height: 10%;
+      color: rgb(1, 46, 16);
     }
 
-    .productos-grid {
-      height: 100vh;
+    .parent {
+      display: flex;
+      height: 100%;
+      margin: 0 auto;
       width: 100%;
+      overflow: hidden;
+      padding: 20px 0;
+      margin: 0;
 
-      .parent {
-        display: grid;
-        height: 100%;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-        grid-column-gap: 30px;
-        grid-row-gap: 40px;
-
-
-
-        .prod {}
-
-        .div1 {
-          grid-area: 1 / 1 / 3 / 3;
-        }
-
-        .div2 {
-          grid-area: 1 / 3 / 3 / 5;
-        }
-
-        .div3 {
-          grid-area: 1 / 5 / 3 / 7;
-        }
-
-        .div4 {
-          grid-area: 3 / 1 / 5 / 3;
-        }
-
-        .div5 {
-          grid-area: 3 / 3 / 5 / 5;
-        }
-
-        .div6 {
-          grid-area: 3 / 5 / 5 / 7;
-        }
-
-
+      >* {
+        flex: 0 0 100%;
       }
 
+      .group {
+        display: flex;
+        gap: 20px;
+        padding-right: 20px;
+        will-change: transform;
+        animation: scrolling 25s linear infinite;
+  
+      }
 
+      &:hover .group{
+        animation-play-state: paused;
 
+      }
     }
+
+
+    @keyframes scrolling {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
   }
 }
 
@@ -240,9 +241,13 @@ body {
 body.dark {
   $h1-color: -webkit-linear-gradient(90deg, rgba(2, 58, 41, 0.068) 30%, rgb(255, 255, 255) 60%);
   $a-color: rgb(255, 255, 255);
+  $bg-color: rgb(15, 15, 15);
+  background-color: $bg-color;
+
+  $card-bg: green;
 
   header {
-    background: url('images/back-noche2.jpg');
+    background: linear-gradient(0deg, rgb(15, 15, 15) 0.5%, rgba(0, 0, 0, 0.06486344537815125) 70%), url('images/back-noche2.jpg');
     height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
@@ -253,17 +258,31 @@ body.dark {
       background: $h1-color;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      padding: 10px;
     }
 
-    .links{
-      a{
+    .links {
+      a {
         color: $a-color;
       }
 
     }
+
+
   }
 
+  .productos {
+    background-color: rgb(39, 39, 39);
+
+    h2 {
+      color: white;
+    }
+  }
+
+}
+
+//SEPARADOR------------------------------------------------------------------------------------------
+.separator {
+  height: 15vh;
 }
 
 //CARDS-----------------------------------------------------------------------------------------------------------------------------
