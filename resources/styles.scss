@@ -34,7 +34,7 @@ body {
   box-sizing: border-box;
   background-color: $bg-color;
 
-
+  //--------------HEADER ---------------------------------------------------------------------------------
 
   header {
     background: linear-gradient(0deg, rgb(0, 7, 2) 0.5%, rgba(0, 0, 0, 0.06486344537815125) 70%), $background-image;
@@ -177,6 +177,8 @@ body {
 
   }
 
+  //--------------INFO ---------------------------------------------------------------------------------
+
   .info {
     display: flex;
     justify-content: center;
@@ -184,6 +186,7 @@ body {
     width: 80%;
     margin: auto;
     padding: 3% 5%;
+    background-color: #d3dadf;
   }
   
   .card {
@@ -225,11 +228,12 @@ body {
         transform: rotateY(180deg);
       }
       .back {
-        transform: rotateY(0deg);
+        transform: rotateY(360deg);
       }
     }
   }
   
+  //--------------CARROUSEL PRODUCTOS ---------------------------------------------------------------------------------
 
   .productos {
     height: 85vh;
@@ -291,6 +295,8 @@ body {
 
   }
 
+  //--------------SIGUIENTE SECCION ---------------------------------------------------------------------------------
+
 }
 
 
@@ -344,6 +350,7 @@ body.dark {
     p {
       color: white;
     }
+    
   }
 
   .productos {

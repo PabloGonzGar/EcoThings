@@ -132,6 +132,7 @@ body .info {
   width: 80%;
   margin: auto;
   padding: 3% 5%;
+  background-color: #d3dadf;
 }
 body .card {
   width: 70%;
@@ -168,7 +169,7 @@ body .card:hover .front {
   transform: rotateY(180deg);
 }
 body .card:hover .back {
-  transform: rotateY(0deg);
+  transform: rotateY(360deg);
 }
 body .productos {
   height: 85vh;
