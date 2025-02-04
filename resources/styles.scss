@@ -18,7 +18,7 @@ body {
   $background-image : url('images/back-dia.png');
   $h1-color: -webkit-linear-gradient(90deg, rgba(2, 58, 41, 0.068) 35%, rgb(0, 12, 4) 70%);
   $a-color: rgb(0, 12, 4);
-  $bg-color : rgba(0, 12, 4, 1);
+  $bg-color : rgb(0, 7, 2);
 
 
   * {
@@ -37,7 +37,7 @@ body {
 
 
   header {
-    background: linear-gradient(0deg, rgba(0, 12, 4, 1) 0.5%, rgba(0, 0, 0, 0.06486344537815125) 70%), $background-image;
+    background: linear-gradient(0deg, rgb(0, 7, 2) 0.5%, rgba(0, 0, 0, 0.06486344537815125) 70%), $background-image;
     background-color: rgba(0, 12, 4, 1);
     height: 100vh;
     background-position: center;
@@ -151,9 +151,9 @@ body {
 
     }
 
-    nav.scrolled{
+    nav.scrolled {
       backdrop-filter: blur(10px);
-      background-color: rgba(180, 180, 180, 0.363);
+      background-color: rgba(255, 255, 255, 0.308);
     }
 
     .hero {
@@ -177,17 +177,71 @@ body {
 
   }
 
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 3% 5%;
+  }
+  
+  .card {
+    width: 70%;
+    height: 400px;
+    position: relative;
+    perspective: 1000px; 
+  
+    .front, .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden; 
+      transition: transform 1s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+  
+    .front {
+      background-color: #787c72;
+      color: rgb(255, 255, 255);
+    }
+  
+    .back {
+      background-color: #464029;
+      color: white;
+      transform: rotateY(180deg); 
+    }
+  
+    &:hover {
+      .front {
+        transform: rotateY(180deg);
+      }
+      .back {
+        transform: rotateY(0deg);
+      }
+    }
+  }
+  
 
   .productos {
     height: 85vh;
     background-color: #d3dadf;
     @include flexColumn();
-    width: 80%;
+    width: 100%;
     margin: auto;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 15%;
+    padding-right: 15%;
     padding-top: 3%;
     padding-bottom: 3%;
+
 
     h2 {
       font-size: 35px;
@@ -215,10 +269,10 @@ body {
         padding-right: 20px;
         will-change: transform;
         animation: scrolling 25s linear infinite;
-  
+
       }
 
-      &:hover .group{
+      &:hover .group {
         animation-play-state: paused;
 
       }
@@ -236,6 +290,7 @@ body {
     }
 
   }
+
 }
 
 
@@ -258,7 +313,7 @@ body.dark {
     background-size: cover;
     object-fit: fill;
 
-    nav{
+    nav {
       background-color: transparent;
       backdrop-filter: none;
     }
@@ -277,6 +332,18 @@ body.dark {
     }
 
 
+  }
+
+  .info {
+    background-color: rgb(39, 39, 39);
+
+    h2 {
+      color: white;
+    }
+
+    p {
+      color: white;
+    }
   }
 
   .productos {
@@ -352,7 +419,7 @@ body.dark {
     bottom: 0;
     left: 0;
     transform: translateY(0);
-    transition: all 0.35s 0.35s cubic-bezier(.1, .72, .4, .97);
+    transition: all 0.35s 0.35s ;
     will-change: bottom, background-color, transform, padding;
     z-index: 1;
 
