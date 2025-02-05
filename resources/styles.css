@@ -48,9 +48,13 @@ body header nav .links a {
   color: rgb(0, 12, 4);
   font-weight: 600;
   transition: 0.25s;
+  border: 1px solid transparent;
+  padding: 15px;
 }
 body header nav .links a:hover {
   transform: translateY(-15px);
+  border-bottom: solid 1px rgb(0, 12, 4);
+  align-self: end;
 }
 body header nav .modo {
   display: flex;
@@ -70,7 +74,7 @@ body header nav .modo .switch-label {
   display: block;
   width: 60px;
   height: 30px;
-  background-color: #3c4145;
+  background-color: #27572c;
   border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -129,7 +133,8 @@ body .info {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  border-radius: 15px;
+  width: 70%;
   margin: auto;
   padding: 3% 5%;
   background-color: #d3dadf;
@@ -161,7 +166,7 @@ body .card .front {
   color: rgb(255, 255, 255);
 }
 body .card .back {
-  background-color: #464029;
+  background-color: #3b5577;
   color: white;
   transform: rotateY(180deg);
 }
@@ -236,6 +241,9 @@ body.dark header nav {
   background-color: transparent;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
+}
+body.dark header nav .links a:hover {
+  border-bottom: solid 1px rgb(255, 255, 255);
 }
 body.dark header h1 {
   background: -webkit-linear-gradient(90deg, rgba(2, 58, 41, 0.068) 30%, rgb(255, 255, 255) 60%);

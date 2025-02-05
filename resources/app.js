@@ -31,27 +31,11 @@ dayNightSwitch.addEventListener("change", function () {
 });
 
 window.addEventListener("scroll", () => {
-    console.log("ahora");
     //no capta el window.scroll > 1 --> siempre es false
 
     if (window.scrollY > 200) {
-        console.log("aqui");
         nav.setAttribute("class", "scrolled")
     } else {
-        console.log("no");
         nav.classList.remove("scrolled")
     }
 })
-
-
-const flipCards = document.querySelectorAll(".card .front");
-
-flipCards.addEventListener("mouseover", function () {
-    flipCards.setAttribute("class", "flip");
-});
-
-const flipCardsBack = document.querySelectorAll(".card .back");
-
-flipCardsBack.addEventListener("mouseover", function () {
-    this.classList.add("flip");
-});
