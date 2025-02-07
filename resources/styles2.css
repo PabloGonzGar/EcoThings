@@ -1,0 +1,158 @@
+.feed {
+  background-color: #d3dadf;
+  padding-left: 15%;
+  padding-right: 15%;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.feed h2 {
+  font-size: 35px;
+  font-weight: 600;
+  height: 10%;
+  color: rgb(1, 46, 16);
+}
+.feed .feeds {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transition: 0.3 all ease-in-out;
+}
+.feed .feeds .multiply-feeds {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+}
+.feed .feeds .multiply-feeds .feed-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+.feed .feeds .multiply-feeds .feed-card .feed-card-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.feed .feeds .multiply-feeds .feed-card .feed-card-profile img {
+  border-radius: 150px;
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.feed .feeds .multiply-feeds .feed-card .feed-card-profile .feed-card-name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.feed .feeds .multiply-feeds .feed-card .feed-card-profile .feed-card-name h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+.feed .feeds .multiply-feeds .feed-card .feed-card-profile .feed-card-name p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+}
+.feed .feeds .multiply-feeds .feed-card .text {
+  font-size: 14px;
+}
+.feed .feeds .single-feed {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 70%;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: white;
+  padding: 20px;
+  cursor: pointer;
+}
+.feed .feeds .single-feed .feed-card-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.feed .feeds .single-feed .feed-card-profile img {
+  border-radius: 150px;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.feed .feeds .single-feed .feed-card-profile .feed-card-name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.feed .feeds .single-feed .feed-card-profile .feed-card-name h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+.feed .feeds .single-feed .feed-card-profile .feed-card-name h3 .verified {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+}
+.feed .feeds .single-feed .feed-card-profile .feed-card-name h3 .verified svg {
+  fill: rgb(0, 132, 255);
+}
+.feed .feeds .single-feed .feed-card-profile .feed-card-name p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.4;
+}
+.feed .feeds .single-feed .text {
+  font-size: 14px;
+  text-align: center;
+}
+.feed .feeds .single-feed video {
+  width: 100%;
+  height: auto;
+}
+.feed .feeds:hover .feed-card:not(:hover) {
+  filter: blur(5px);
+}
+
+body.dark {
+  background-color: rgb(15, 15, 15);
+}
+body.dark .feed {
+  background-color: rgb(39, 39, 39);
+}
+body.dark .feed h2 {
+  color: white;
+}
+body.dark .feed .multiply-feeds .feed-card {
+  background-color: rgb(66, 66, 66);
+  color: white;
+}
+body.dark .feed .single-feed {
+  background-color: rgb(66, 66, 66);
+  color: white;
+}
+body.dark .feed .single-feed h3 {
+  color: white;
+}
+body.dark .feed .single-feed h3 .verified {
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
+}
+body.dark .feed .single-feed h3 .verified svg {
+  fill: rgb(255, 255, 255);
+}/*# sourceMappingURL=styles2.css.map */

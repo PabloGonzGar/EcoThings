@@ -13,7 +13,6 @@ dayNightSwitch.addEventListener("change", function () {
         logoNoche.setAttribute("src", "resources/images/logo-noche.svg")
         logoNoche.setAttribute("width", "70px")
         logo.appendChild(logoNoche)
-
     } else {
 
         document.body.classList.remove("dark");

@@ -10,10 +10,10 @@ body {
   background-color: #d3dadf;
 }
 body * {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 body header {
-  background: linear-gradient(0deg, rgb(0, 7, 2) 0.5%, rgba(0, 0, 0, 0.0648634454) 70%), url("images/back-dia.png");
+  background: url("images/back-dia.png");
   background-color: rgb(0, 12, 4);
   height: 100vh;
   background-position: center;
@@ -53,7 +53,6 @@ body header nav .links a {
 }
 body header nav .links a:hover {
   transform: translateY(-15px);
-  border-bottom: solid 1px rgb(0, 12, 4);
   align-self: end;
 }
 body header nav .modo {
@@ -129,12 +128,22 @@ body header .hero h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+body header .wave {
+  margin-top: 5vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  fill: #d3dadf;
+}
 body .info {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 70vh;
   width: 100%;
-  background-color: rgb(0, 7, 4);
+  background-color: #a5acb1;
   margin: auto;
   padding: 3% 5%;
 }
@@ -144,7 +153,8 @@ body .card {
   position: relative;
   perspective: 1000px;
 }
-body .card .front, body .card .back {
+body .card .front,
+body .card .back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -161,13 +171,15 @@ body .card .front, body .card .back {
   font-size: 20px;
 }
 body .card .front {
-  background-color: #86B971;
-  color: white;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 body .card .back {
-  background-color: #3b5577;
+  background-color: rgb(77, 109, 74);
   color: white;
   transform: rotateX(180deg);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 body .card:hover .front {
   transform: rotateX(180deg);
@@ -236,13 +248,13 @@ body.dark header {
   -o-object-fit: fill;
      object-fit: fill;
 }
+body.dark header .wave {
+  fill: rgb(39, 39, 39);
+}
 body.dark header nav {
   background-color: transparent;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
-}
-body.dark header nav .links a:hover {
-  border-bottom: solid 1px rgb(255, 255, 255);
 }
 body.dark header h1 {
   background: -webkit-linear-gradient(90deg, rgba(2, 58, 41, 0.068) 30%, rgb(255, 255, 255) 60%);
@@ -253,13 +265,51 @@ body.dark header .links a {
   color: rgb(255, 255, 255);
 }
 body.dark .info {
-  background-color: rgb(15, 15, 15);
+  background-color: rgb(22, 22, 22);
 }
 body.dark .info h2 {
   color: white;
 }
 body.dark .info p {
   color: white;
+}
+body.dark .info .card {
+  width: 70%;
+  height: 400px;
+  position: relative;
+  perspective: 1000px;
+}
+body.dark .info .card .front,
+body.dark .info .card .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: transform 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 20px;
+}
+body.dark .info .card .front {
+  background-color: rgb(66, 66, 66);
+  color: white;
+}
+body.dark .info .card .back {
+  background-color: rgb(77, 109, 74);
+  color: white;
+  transform: rotateX(180deg);
+}
+body.dark .info .card:hover .front {
+  transform: rotateX(180deg);
+}
+body.dark .info .card:hover .back {
+  transform: rotateX(360deg);
 }
 body.dark .productos {
   background-color: rgb(39, 39, 39);
@@ -281,9 +331,10 @@ body.dark .opiniones h2 {
 .card-hover {
   width: 360px;
   height: 500px;
+  border-radius: 15px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 32px -10px rgba(0, 0, 0, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .card-hover img {
   max-width: 100%;
