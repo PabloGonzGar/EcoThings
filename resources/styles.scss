@@ -32,7 +32,7 @@ body {
   padding: 0;
   transition: 0.3s ease;
   box-sizing: border-box;
-  background-color: $bg-color;
+  background-color: #d3dadf;
 
   //--------------HEADER ---------------------------------------------------------------------------------
 
@@ -186,11 +186,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
-    width: 70%;
+    width: 100%;
+    background-color: rgb(0, 7, 4);
     margin: auto;
     padding: 3% 5%;
-    background-color: #d3dadf;
   }
   
   .card {
@@ -217,22 +216,22 @@ body {
     }
   
     .front {
-      background-color: #787c72;
-      color: rgb(255, 255, 255);
+      background-color: #86B971;
+      color: white;
     }
   
     .back {
       background-color: #3b5577;
       color: white;
-      transform: rotateY(180deg); 
+      transform: rotateX(180deg); 
     }
   
     &:hover {
       .front {
-        transform: rotateY(180deg);
+        transform: rotateX(180deg);
       }
       .back {
-        transform: rotateY(360deg);
+        transform: rotateX(360deg);
       }
     }
   }
@@ -301,6 +300,9 @@ body {
 
   //--------------SIGUIENTE SECCION ---------------------------------------------------------------------------------
 
+
+
+
 }
 
 
@@ -311,7 +313,7 @@ body.dark {
   $h1-color: -webkit-linear-gradient(90deg, rgba(2, 58, 41, 0.068) 30%, rgb(255, 255, 255) 60%);
   $a-color: rgb(255, 255, 255);
   $bg-color: rgb(15, 15, 15);
-  background-color: $bg-color;
+  background-color: rgb(15, 15, 15);
 
   $card-bg: green;
 
@@ -351,7 +353,8 @@ body.dark {
   }
 
   .info {
-    background-color: rgb(39, 39, 39);
+
+    background-color: rgb(15, 15, 15);
 
     h2 {
       color: white;
@@ -364,6 +367,15 @@ body.dark {
   }
 
   .productos {
+    background-color: rgb(39, 39, 39);
+
+    h2 {
+      color: white;
+    }
+  }
+
+
+  .opiniones {  
     background-color: rgb(39, 39, 39);
 
     h2 {
