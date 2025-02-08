@@ -1,0 +1,152 @@
+
+
+footer {
+  
+  border-top: 1px solid darken(#d3dadf, 10%);
+  background-color: #d3dadf;
+  color: black;
+  padding: 2rem 0;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 1rem;
+    text-align: center;
+
+    h3 {
+      color: rgb(1, 46, 16);
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 0.5rem;
+
+        a {
+          color: black;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: green;
+          }
+        }
+      }
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+
+    .social-icon {
+      color: rgb(0,12,4);
+      font-size: 1.5rem;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: green;
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid darken(#d3dadf, 10%);
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+
+body.dark{
+    footer{
+        background-color: rgb(39, 39, 39);
+        color: white;
+        padding: 2rem 0;
+      
+        .footer-container {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 0 1rem;
+        }
+      
+        .footer-section {
+          flex: 1;
+          min-width: 200px;
+          margin-bottom: 1rem;
+      
+          h3 {
+            color: rgb(255, 255, 255);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+          }
+      
+          ul {
+            list-style-type: none;
+            padding: 0;
+      
+            li {
+              margin-bottom: 0.5rem;
+      
+              a {
+                color: white;
+                text-decoration: none;
+                transition: color 0.3s ease;
+      
+                &:hover {
+                  color: green;
+                }
+              }
+            }
+          }                  
+        
+        .social-icons {
+          display: flex;
+          gap: 1rem;
+      
+          .social-icon {
+            color: rgb(0,12,4);
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+      
+            &:hover {
+              color: green;
+            }
+          }
+        }
+      
+        .footer-bottom {
+          text-align: center;
+          margin-top: 2rem;
+          padding-top: 1rem;
+          border-top: 1px solid darken(#d3dadf, 10%);
+      
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+}       
+}

@@ -45,11 +45,8 @@ body {
     background-size: cover;
     object-fit: fill;
 
-
-
     @include flexColumn();
     gap: 5vh;
-
 
     nav {
 
@@ -173,20 +170,22 @@ body {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
 
+        &:hover{
+          cursor:default;
+        }
       }
 
     }
     
     .wave {
-      margin-top: 5vh;
-      width: 100%;
       overflow: hidden;
+      margin-top: 5rem;
+      width: 100%;
       display: flex;
-      justify-self: center;
-      align-self: center;
+      justify-self: flex-end;
+      align-self: flex-end;
       fill: #d3dadf;
     }
-
 
   }
 
